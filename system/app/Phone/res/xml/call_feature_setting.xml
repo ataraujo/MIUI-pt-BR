@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/call_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:phone="http://schemas.android.com/apk/res/com.android.phone">
+    <PreferenceCategory android:title="@string/phone_call_pref_title">
+        <CheckBoxPreference android:persistent="false" android:title="@string/turnover_mute_title" android:key="turnover_mute" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/handon_ringer_title" android:key="handon_ringer" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/enable_proximity_title" android:key="enable_proximity" android:summary="@string/enable_proximity_summary" android:defaultValue="true" />
+        <EditTextPreference android:minLines="2" android:title="@string/predefined_hangup_sms_title" android:key="predefined_hangup_sms" android:summary="@string/predefined_hangup_sms_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_dialer_list_title" android:key="pref_dialer_list">
+        <ListPreference android:entries="@array/dialer_click_entries" android:title="@string/dialer_click_pref_title" android:key="dialer_click_pref" android:defaultValue="2" android:dialogTitle="@string/dialer_click_pref_title" android:entryValues="@array/dialer_click_values" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/show_call_log_number_title" android:key="show_call_log_number" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/show_quick_contact_badge_title" android:key="show_quick_contact_badge" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/auto_dialpad_pref_title" android:key="button_auto_dialpad" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_outgoing_call_title">
+        <CheckBoxPreference android:persistent="true" android:title="@string/autoip" android:key="button_autoip" android:summary="@string/autoip_sum" android:defaultValue="false" android:disableDependentsState="false" />
+        <EditTextPreference android:persistent="true" android:title="@string/ip_prefix" android:key="text_ip_prefix" android:summary="@string/ip_prefix_sum" android:dependency="button_autoip" android:inputType="phone" />
+        <EditTextPreference android:persistent="true" android:title="@string/current_areacode" android:key="text_current_areacode" android:summary="@string/current_areacode_sum" android:dependency="button_autoip" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_phone_security_title">
+        <PreferenceScreen android:title="@android:string/firewall_setting">
+            <intent android:action="android.intent.action.SET_FIREWALL" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:persistent="false" android:title="@string/allow_3rd_app_listen_phone_event_title" android:key="pref_key_allow_3rd_phone" android:summary="@string/allow_3rd_app_listen_phone_event_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <PreferenceScreen android:title="@string/pref_more_settings_title">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.CallFeaturesMoreSetting" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/package_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <CheckBoxPreference android:persistent="false" android:title="@string/sms_package" android:key="monitor_sms_traffic" />
+        <EditTextPreference android:title="@string/sms_traffic_limit" android:key="sms_traffic_limit" android:dependency="monitor_sms_traffic" android:inputType="number" />
+        <EditTextPreference android:title="@string/threshold" android:key="sms_traffic_threshold" android:dependency="monitor_sms_traffic" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:persistent="false" android:title="@string/mobile_package" android:key="monitor_mobile_traffic" />
+        <EditTextPreference android:title="@string/mobile_traffic_limit" android:key="mobile_traffic_limit" android:dependency="monitor_mobile_traffic" android:inputType="number" />
+        <EditTextPreference android:title="@string/threshold" android:key="mobile_traffic_threshold" android:dependency="monitor_mobile_traffic" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <EditTextPreference android:persistent="false" android:title="@string/first_traffic_day" android:key="first_traffic_day" android:inputType="number" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.phone">
+    <com.android.phone.CdmaRoamingListPreference android:entries="@array/cdma_system_select_choices" android:title="@string/cdma_system_select_title" android:key="cdma_roaming_mode_key" android:summary="@string/cdma_system_select_summary" android:dialogTitle="@string/cdma_system_select_dialogtitle" android:entryValues="@array/cdma_system_select_values" />
+</PreferenceScreen>

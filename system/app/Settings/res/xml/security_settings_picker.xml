@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/lock_settings_picker_title" android:key="security_picker_category">
+        <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_none_title" android:key="unlock_set_none" android:summary="@string/unlock_set_unlock_none_summary" android:image="@drawable/ic_inactive" />
+        <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_pattern_title" android:key="unlock_set_pattern" android:summary="@string/unlock_set_unlock_pattern_summary" android:image="@drawable/ic_inactive" />
+        <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_pin_title" android:key="unlock_set_pin" android:summary="@string/unlock_set_unlock_pin_summary" android:image="@drawable/ic_inactive" />
+        <PreferenceScreen android:persistent="false" android:title="@string/unlock_set_unlock_password_title" android:key="unlock_set_password" android:summary="@string/unlock_set_unlock_password_summary" android:image="@drawable/ic_inactive" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/personal_password_for" android:key="personal_password_for">
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_lockscreen_title" android:key="personal_password_for_lockscreen" android:summary="@string/personal_password_for_lockscreen_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_folderhidden_title" android:key="personal_password_for_folderhidden" android:summary="@string/personal_password_for_folderhidden_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_privacymode_title" android:key="personal_password_for_privacymode" android:summary="@string/personal_password_for_privacymode_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_dialer_title" android:key="personal_password_for_dialer" android:summary="@string/personal_password_for_dialer_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_mms_title" android:key="personal_password_for_mms" android:summary="@string/personal_password_for_mms_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_notes_title" android:key="personal_password_for_notes" android:summary="@string/personal_password_for_notes_summary" android:defaultValue="false" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/personal_password_for_firewall_title" android:key="personal_password_for_firewall" android:summary="@string/personal_password_for_firewall_summary" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

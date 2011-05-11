@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_notification_settings_title">
+        <CheckBoxPreference android:persistent="false" android:title="@string/pref_title_notification_enabled" android:key="pref_key_enable_notification" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:persistent="false" android:title="@string/pref_title_notification_body_enabled" android:key="pref_key_enable_notification_body" android:summary="@string/pref_summary_notification_body_enabled" android:dependency="pref_key_enable_notification" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_title_new_message_popup" android:key="pref_key_enable_new_message_popup" android:summary="@string/pref_summary_new_message_popup" android:dependency="pref_key_enable_notification_body" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/pref_title_wake_up_screen" android:key="pref_key_enable_wake_up_screen" android:summary="@string/pref_summary_wake_up_screen" android:dependency="pref_key_enable_notification" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_title_delivery_reports" android:key="pref_key_delivery_reports" android:summary="@string/pref_summary_delivery_reports" android:dependency="pref_key_enable_notification" android:defaultValue="true" />
+        <ListPreference android:entries="@array/prefEntries_ringtone_repeat" android:title="@string/pref_title_ringtone_repeat" android:key="pref_key_ringtone_repeat" android:summary="@string/pref_summary_ringtone_repeat" android:dependency="pref_key_enable_notification" android:defaultValue="@string/prefDefault_ringtone_repeat" android:dialogTitle="@string/pref_title_ringtone_repeat" android:entryValues="@array/prefValues_ringtone_repeat" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <RingtonePreference android:title="@string/pref_title_notification_ringtone" android:key="pref_key_ringtone" android:dependency="pref_key_enable_notification" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" />
+        <RingtonePreference android:title="@string/pref_title_delivery_ringtone" android:key="pref_key_delivery_ringtone" android:dependency="pref_key_delivery_reports" android:defaultValue="content://settings/system/notification_sound" android:ringtoneType="notification" />
+        <ListPreference android:entries="@array/prefEntries_vibrateWhen" android:title="@string/pref_title_notification_vibrateWhen" android:key="pref_key_vibrateWhen" android:summary="@string/pref_summary_notification_vibrateWhen" android:dependency="pref_key_enable_notification" android:defaultValue="@string/prefDefault_vibrateWhen" android:dialogTitle="@string/prefDialogTitle_vibrateWhen" android:entryValues="@array/prefValues_vibrateWhen" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_sms_theme_title" android:key="pref_key_theme_settings">
+        <PreferenceScreen android:title="@string/theme_modify" android:key="pref_key_launch_theme_modify" />
+        <PreferenceScreen android:title="@string/message_theme_setting" android:key="message_theme_setting">
+            <intent android:action="com.android.mms.THEME_MESSAGES_EDIT" />
+        </PreferenceScreen>
+        <CheckBoxPreference android:title="@string/pref_conversation_show_avatar_title" android:key="pref_key_conversation_show_avatar" android:summary="@string/pref_conversation_show_avatar_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_other_title" android:key="pref_other_settings">
+        <CheckBoxPreference android:title="@string/pref_key_append_signature_title" android:key="pref_key_append_signature" android:summary="@string/pref_key_append_signature_summary" android:defaultValue="false" />
+        <EditTextPreference android:hint="@string/pref_key_signature_hint" android:minLines="3" android:title="@string/pref_key_edit_signature_title" android:key="pref_key_edit_signature" android:summary="@string/pref_key_signature_summary" android:dependency="pref_key_append_signature" />
+        <PreferenceScreen android:title="@string/pref_advanced_settings_title" android:key="pref_advanced_settings">
+            <intent android:targetPackage="com.android.mms" android:action="android.intent.action.MAIN" android:targetClass="com.android.mms.ui.MessagingAdvancedPreferenceActivity" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

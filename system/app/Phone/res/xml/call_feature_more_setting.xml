@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/call_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:phone="http://schemas.android.com/apk/res/com.android.phone">
+    <PreferenceCategory android:key="pref_more_basic">
+        <com.android.phone.CLIRListPreference android:persistent="false" android:entries="@array/clir_display_values" android:title="@string/labelCallerId" android:key="button_clir_key" android:defaultValue="DEFAULT" android:dialogTitle="@string/labelCallerId" android:entryValues="@array/clir_values" />
+        <PreferenceScreen android:persistent="false" android:title="@string/fdn" android:key="button_fdn_key">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.FdnSetting" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/sip_settings" android:key="sip_settings_category_key">
+        <PreferenceScreen android:persistent="false" android:title="@string/sip_accounts_title" android:key="sip_account_settings_key">
+            <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.sip.SipSettings" />
+        </PreferenceScreen>
+        <ListPreference android:persistent="true" android:entries="@array/sip_call_options_entries" android:title="@string/sip_call_options_title" android:key="sip_call_options_key" android:entryValues="@array/sip_call_options_values" />
+        <ListPreference android:persistent="true" android:entries="@array/sip_call_options_wifi_only_entries" android:title="@string/sip_call_options_title" android:key="sip_call_options_wifi_only_key" android:dialogTitle="@string/sip_call_options_wifi_only_title" android:entryValues="@array/sip_call_options_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/voicemail" android:key="button_voicemail_category_key">
+        <ListPreference android:persistent="true" android:title="@string/voicemail_provider" android:key="button_voicemail_provider_key" android:summary="@string/sum_voicemail_choose_provider" android:defaultValue="" />
+        <PreferenceScreen android:persistent="false" android:title="@string/voicemail_settings" android:key="button_voicemail_setting_key">
+            <com.android.phone.EditPhoneNumberPreference android:persistent="false" android:hint="@string/voice_number_hint" android:singleLine="true" android:autoText="false" android:title="@string/voicemail_settings_number_label" android:key="button_voicemail_key" android:dialogTitle="@string/voicemail" phone:confirmMode="confirm" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:persistent="false" android:title="@string/other_settings" android:key="button_other_settings_key" />
+    <ListPreference android:persistent="false" android:entries="@array/voice_quality_ui_values" android:title="@string/crystaltalk_title" android:key="button_crystal_talk_settings" android:summary="@string/crystaltalk_summary" android:entryValues="@array/voice_quality_ui_values" />
+    <CheckBoxPreference android:persistent="false" android:title="@string/auto_retry_mode_title" android:key="button_auto_retry_key" android:summary="@string/auto_retry_mode_summary" />
+    <ListPreference android:persistent="false" android:entries="@array/tty_mode_entries" android:title="@string/tty_mode_option_title" android:key="button_tty_mode_key" android:summary="@string/tty_mode_option_summary" android:entryValues="@array/tty_mode_values" />
+    <CheckBoxPreference android:persistent="true" android:title="@string/hac_mode_title" android:key="button_hac_key" android:summary="@string/hac_mode_summary" />
+    <ListPreference android:entries="@array/dtmf_tone_entries" android:title="@string/dtmf_tones_title" android:key="button_dtmf_settings" android:summary="@string/dtmf_tones_summary" android:entryValues="@array/dtmf_tone_values" />
+    <PreferenceScreen android:persistent="false" android:title="@string/labelCF" android:key="button_cf_expand_key">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.GsmUmtsCallForwardOptions" />
+    </PreferenceScreen>
+    <com.android.phone.CallWaitingCheckBoxPreference android:persistent="false" android:title="@string/labelCW" android:key="button_cw_key" android:summaryOn="@string/sum_cw_enabled" android:summaryOff="@string/sum_cw_disabled" />
+    <PreferenceScreen android:persistent="false" android:title="@string/labelCDMAMore" android:key="button_cdma_more_expand_key" android:summary="@string/sum_cdma_call_settings">
+        <intent android:targetPackage="com.android.phone" android:action="android.intent.action.MAIN" android:targetClass="com.android.phone.CdmaCallOptions" />
+    </PreferenceScreen>
+</PreferenceScreen>

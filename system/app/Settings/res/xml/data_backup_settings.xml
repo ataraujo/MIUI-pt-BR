@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/data_backup_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+    <PreferenceCategory android:title="@string/backup_section_title" android:key="backup_category">
+        <CheckBoxPreference android:persistent="false" android:title="@string/backup_data_title" android:key="backup_data" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/auto_restore_title" android:key="auto_restore" android:summary="@string/auto_restore_summary" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/personal_data_section_title">
+        <PreferenceScreen android:title="@string/add_new_backup">
+            <intent android:targetPackage="com.miui.backup" android:action="android.intent.action.MAIN" android:targetClass="com.miui.backup.BackupActivity" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <PreferenceScreen android:title="@string/master_clear_title">
+            <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.MasterClear" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

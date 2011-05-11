@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/pc_connection_settings_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/ask_user_usb_mode" android:key="ask_user" />
+    </PreferenceCategory>
+    <CheckBoxPreferenceCategory android:title="@string/default_usb_mode" android:key="usb_mode">
+        <com.android.settings.RadioButtonPreference android:title="@string/usb_mode_charge_only" android:key="charge_only" />
+        <com.android.settings.RadioButtonPreference android:title="@string/usb_mode_mount_storage" android:key="mount_storage" />
+    </CheckBoxPreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" android:summary="@string/keep_screen_on_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

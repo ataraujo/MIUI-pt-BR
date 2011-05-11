@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreferenceCategory android:title="@string/pref_time_appearance_title">
+        <RadioButtonPreference android:title="@string/pref_time_all_title" android:key="pref_key_time_style_all" android:defaultValue="true" />
+        <RadioButtonPreference android:title="@string/pref_time_auto_group_title" android:key="pref_key_time_style_auto_group" />
+    </CheckBoxPreferenceCategory>
+    <CheckBoxPreferenceCategory android:title="@string/pref_messaging_style_title">
+        <RadioButtonPreference android:title="@string/pref_messaging_bubble_title" android:key="pref_key_messaging_bubble" />
+        <RadioButtonPreference android:title="@string/pref_messaging_list_title" android:key="pref_key_messaging_list" />
+        <RadioButtonPreference android:title="@string/pref_messaging_by_theme_title" android:key="pref_key_messaging_by_theme" android:defaultValue="true" />
+    </CheckBoxPreferenceCategory>
+</PreferenceScreen>

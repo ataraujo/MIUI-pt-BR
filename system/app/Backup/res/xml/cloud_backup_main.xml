@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/cloud_home_title"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.miui.milk.ui.TitleCustomPreference android:persistent="false" android:key="title_custom" />
+    <PreferenceCategory>
+        <PreferenceScreen android:title="@string/button_backup_now" android:key="backup_now" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <PreferenceScreen android:title="@string/button_restore_data" android:key="restore_data" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/firewall_settings" android:key="pref_root"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="white_list_members">
+        <PreferenceScreen android:persistent="false" android:title="@string/list_members">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.WhitelistMember" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/call_rule">
+        <CheckBoxPreference android:persistent="false" android:title="@string/show_in_calllog" android:key="show_in_calllog" android:defaultValue="false" />
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_hangup_call" android:key="call_action_1" android:defaultValue="false" />
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_mute_call" android:key="call_action_2" android:defaultValue="false" />
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_ignore_call" android:key="call_action_3" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sms_rule">
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_ignore_ms" android:key="ms_action_1" android:defaultValue="false" />
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_mute_ms" android:key="ms_action_2" android:defaultValue="false" />
+        <RadioButtonPreference android:persistent="false" android:title="@string/act_del_ms" android:key="ms_action_3" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

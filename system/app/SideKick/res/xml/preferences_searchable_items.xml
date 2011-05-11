@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/search_sources"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="search_corpora" android:summary="@string/search_sources_summary" />
+    <CheckBoxPreferenceCategory android:title="@string/search_threshold_title" android:key="search_threshold">
+        <RadioButtonPreference android:title="@string/search_threshold_infinite" android:key="infinite" android:defaultValue="true" />
+        <RadioButtonPreference android:title="@string/search_threshold_thirty" android:key="thirty" />
+        <RadioButtonPreference android:title="@string/search_threshold_ten" android:key="ten" />
+    </CheckBoxPreferenceCategory>
+    <CheckBoxPreferenceCategory android:title="@string/search_engine_title" android:key="search_engine">
+        <RadioButtonPreference android:title="@string/search_engine_google" android:key="google" android:defaultValue="true" />
+        <RadioButtonPreference android:title="@string/search_engine_baidu" android:key="baidu" />
+    </CheckBoxPreferenceCategory>
+</PreferenceScreen>

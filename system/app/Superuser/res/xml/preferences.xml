@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_category_whitelist_title">
+        <ListPreference android:entries="@array/pref_tap_action_entries" android:title="@string/pref_tap_action_title" android:key="pref_tap_action" android:summary="@string/pref_tap_action_summary" android:defaultValue="detail" android:entryValues="@array/pref_tap_action_values" />
+        <CheckBoxPreference android:title="@string/pref_show_status_icons_title" android:key="pref_show_status_icons" android:defaultValue="true" android:summaryOn="@string/pref_show_status_icons_summary_on" android:summaryOff="@string/pref_show_status_icons_summary_off" />
+        <ListPreference android:entries="@array/pref_status_icon_type_entries" android:title="@string/pref_status_icon_type_title" android:key="pref_status_icon_type" android:summary="@string/pref_status_icon_type_summary" android:dependency="pref_show_status_icons" android:defaultValue="dot" android:entryValues="@array/pref_status_icon_type_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_log_title">
+        <Preference android:title="@string/pref_clear_log" android:key="pref_clear_log" />
+        <CheckBoxPreference android:title="@string/pref_24_hour_title" android:key="pref_24_hour_format" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/pref_show_seconds_title" android:key="pref_show_seconds" android:defaultValue="true" />
+        <ListPreference android:entries="@array/pref_date_format_entries" android:title="@string/pref_date_format_title" android:key="pref_date_format" android:defaultValue="default" android:entryValues="@array/pref_date_format_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_notification_title">
+        <CheckBoxPreference android:title="@string/pref_notifications_title" android:key="pref_notifications" android:defaultValue="true" android:summaryOn="@string/pref_notifications_summary_on" android:summaryOff="@string/pref_notifications_summary_off" />
+        <ListPreference android:entries="@array/pref_notification_entries" android:title="@string/pref_notification_title" android:key="pref_notification_type" android:summary="@string/pref_notification_summary" android:dependency="pref_notifications" android:defaultValue="toast" android:entryValues="@array/pref_notification_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_category_info_title">
+        <Preference android:title="@string/pref_version_title" android:key="pref_version" android:summary="@string/pref_version_summary" />
+        <Preference android:title="@string/pref_bin_version_title" android:key="pref_bin_version" android:summary="@string/pref_bin_version_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

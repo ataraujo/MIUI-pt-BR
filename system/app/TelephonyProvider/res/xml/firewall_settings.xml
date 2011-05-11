@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@android:string/firewall_setting"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_no_firewall" android:key="opt_no_firewall" />
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_reject_list" android:key="opt_reject_list" android:widgetLayout="@layout/btn_next">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.BlacklistSetting">
+                <extra android:name="key" android:value="opt_reject_list" />
+                <extra android:name="id" android:value="1" />
+            </intent>
+        </com.android.providers.telephony.RadioPreference>
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_reject_stranger" android:key="opt_reject_stranger" android:widgetLayout="@layout/btn_next">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.WhitelistSetting">
+                <extra android:name="key" android:value="opt_reject_stranger" />
+                <extra android:name="id" android:value="2" />
+            </intent>
+        </com.android.providers.telephony.RadioPreference>
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_reject_all" android:key="opt_reject_all" android:widgetLayout="@layout/btn_next">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.WhitelistSetting">
+                <extra android:name="key" android:value="opt_reject_all" />
+                <extra android:name="id" android:value="3" />
+            </intent>
+        </com.android.providers.telephony.RadioPreference>
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_accept_starred" android:key="opt_accept_starred" android:widgetLayout="@layout/btn_next">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.WhitelistSetting">
+                <extra android:name="key" android:value="opt_accept_starred" />
+                <extra android:name="id" android:value="4" />
+            </intent>
+        </com.android.providers.telephony.RadioPreference>
+        <com.android.providers.telephony.RadioPreference android:persistent="false" android:title="@string/opt_accept_list" android:key="opt_accept_list" android:widgetLayout="@layout/btn_next">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.WhitelistSetting">
+                <extra android:name="showMemberList" android:value="true" />
+                <extra android:name="key" android:value="opt_accept_list" />
+                <extra android:name="id" android:value="5" />
+            </intent>
+        </com.android.providers.telephony.RadioPreference>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <PreferenceScreen android:persistent="false" android:title="@string/view_firewall_log" android:key="view_firewall_log">
+            <intent android:targetPackage="com.android.providers.telephony" android:action="android.intent.action.VIEW" android:targetClass="com.android.providers.telephony.FirewallLog" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/show_notification" android:key="show_notification" android:summary="@string/show_notification_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="false" android:title="@string/anti_stranger_title" android:key="anti_stranger_call" android:summary="@string/anti_stranger_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

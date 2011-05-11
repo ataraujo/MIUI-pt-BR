@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/battery_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.settings.BatteryLevelPreference android:persistent="false" android:key="battery_level" />
+    <PreferenceCategory>
+        <PreferenceScreen android:title="@string/battery_saving_rules_title" android:key="saving_rules" android:summary="@string/battery_auto_saving_summary">
+            <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.BatterySavingRulesSettings" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/monitor_history" android:key="monitor_history" />
+        <PreferenceScreen android:title="@string/power_usage_summary_title" android:key="power_usage" android:dependency="monitor_history">
+            <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.fuelgauge.PowerUsageSummary" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <com.android.settings.ListPreferenceScreen android:persistent="false" android:entries="@array/battery_indicator_style_entries" android:title="@string/battery_indicator_style" android:key="indicator_style" android:entryValues="@array/battery_indicator_style_values" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/keep_screen_on" android:key="keep_screen_on" />
+    </PreferenceCategory>
+</PreferenceScreen>

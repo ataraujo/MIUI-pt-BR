@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/date_and_time"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/date_time_auto" android:key="auto_time" />
+        <PreferenceScreen android:title="@string/date_time_set_timezone" android:key="timezone" android:summary="GMT-8:00" />
+        <PreferenceScreen android:title="@string/date_time_set_date" android:key="date" android:summary="03/10/2008" />
+        <PreferenceScreen android:title="@string/date_time_set_time" android:key="time" android:summary="12:00am" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <CheckBoxPreference android:title="@string/date_time_24hour" android:key="24 hour" />
+    </PreferenceCategory>
+</PreferenceScreen>

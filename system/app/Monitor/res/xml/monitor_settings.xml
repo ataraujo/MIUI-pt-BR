@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen android:title="@string/monitor_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="@string/package_settings">
+        <intent android:targetPackage="com.android.monitor" android:action="android.intent.action.MAIN" android:targetClass="com.android.monitor.PackageSettings" />
+    </PreferenceScreen>
+    <PreferenceCategory>
+        <CheckBoxPreference android:persistent="true" android:title="@string/display_system_app" android:key="display_system_app" android:defaultValue="true" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/display_status_bar_notification" android:key="display_notification" />
+        <CheckBoxPreference android:persistent="true" android:title="@string/notify_threshold_exceed" android:key="notify_threshold" />
+        <CheckBoxPreference android:title="@string/auto_turn_off_mobile" android:key="turn_off_mobile" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/fix_traffic">
+        <EditTextPreference android:hint="@string/mobile_unit" android:title="@string/mobile_traffic_used" android:key="mobile_traffic_used" android:inputType="numberDecimal" />
+        <EditTextPreference android:hint="@string/sms_unit" android:title="@string/sms_traffic_used" android:key="sms_traffic_used" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory>
+        <Preference android:layout="@layout/preference_middle" android:title="@string/clear_traffic" android:key="clear_traffic" />
+    </PreferenceCategory>
+</PreferenceScreen>

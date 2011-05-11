@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="dialer_matchHighlight">#ffeecf6a</color>
+    <color name="incall_textConnected">#ff99ce3f</color>
+    <color name="incall_textConnectedBluetooth">#ff54c1ff</color>
+    <color name="incall_textEnded">#ffff6072</color>
+    <color name="incall_textOnHold">#ffff9524</color>
+    <color name="incall_endButtonLabel">#ffff6072</color>
+    <color name="incall_callTypeSip">#ff99ce3f</color>
+    <color name="dtmf_dialer_background">#ff333333</color>
+    <color name="dtmf_dialer_display_text">#ffffffff</color>
+    <color name="call_card_name">#ffffffff</color>
+    <color name="call_card_name_shadow">#8c000000</color>
+    <color name="call_card_info">#7fffffff</color>
+    <color name="call_card_info_shadow">#8c000000</color>
+    <color name="sliding_target">#ffffffff</color>
+    <color name="sliding_bar">#ffffffff</color>
+    <color name="sliding_bar_shadow">#59000000</color>
+    <color name="normal_button">#cc000000</color>
+    <color name="normal_button_shadow">#7fffffff</color>
+    <color name="red_button">#ffffffff</color>
+    <color name="red_button_shadow">#59000000</color>
+    <color name="incall_control_button">#ffffffff</color>
+    <color name="incall_control_button_shadow">#8c000000</color>
+    <color name="incall_control_button_disable">#80ffffff</color>
+    <color name="incall_control_button_checked">#ffff9600</color>
+</resources>
